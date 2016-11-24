@@ -19,7 +19,6 @@ def setup_ciphers():
     decCipher={}
     for letter,offset in {'a':0,'A':26}.items():
         for i in range(26):
-            print(letter)
             encCipher[letter]=tmp_cipher[i+offset]
             decCipher[tmp_cipher[i+offset]]=letter
             letter=chr(ord(letter)+1)
