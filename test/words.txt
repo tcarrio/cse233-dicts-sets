@@ -1,0 +1,11 @@
+Well hello there guys!
+
+This is a test of the program.
+
+This will check for unique instances of words in this particular text. 
+
+Well, hopefully. If not, something is wrong and we'll need to make sure this is working fine in time for the presentation, right?
+
+Well, later!
+
+I don't say well this often, just, well, need duplicates. 
