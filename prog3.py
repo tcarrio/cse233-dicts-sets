@@ -2,7 +2,6 @@
 # Course: CSE-233
 
 import sys
-import pprint
 
 def setup_files():
     if(len(sys.argv)==4):
