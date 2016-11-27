@@ -1,5 +1,4 @@
 from random import shuffle
-import pprint # debugging card stack
 
 class Card():
     def __init__(self,s,k):
@@ -39,7 +38,6 @@ class Deck():
 
     def get_top(self):
         top=self.cards.pop()
-        #self.cards.insert(0,top)
         self.in_use.append(top)
         self.cards_played+=1
         print("Taking one from the top")
