@@ -88,6 +88,7 @@ ENV/
 # Rope project settings
 .ropeproject
 
-# Ignore all but useful txt files in test
+# Ignore test except useful files
 test/*
 !test/*.txt
+!test/*.obj
