@@ -2,8 +2,10 @@ from random import shuffle
 
 class Card():
     def __init__(self,s,k):
-        self.suit=s
-        self.kind=k
+        self.info={
+            "suit":s,
+            "kind":k
+        }
         self.symbol_map={
             'clubs':'♣',
             'diamonds':'♦',
@@ -12,15 +14,15 @@ class Card():
         }
 
     def value(self):
-        if(self.kind=='A'):
+        if(self.info['kind']=='A'):
             return [1,11]
-        elif(self.kind in ['J','Q','K']):
+        elif(self.info['kind'] in ['J','Q','K']):
             return [10]
         else:
-            return [int(self.kind)]
+            return [int(self.info['kind'])]
 
     def __str__(self):
-        return ("{:>2}{}".format(self.kind,self.symbol_map[self.suit]))
+        return ("{:>2}{}".format(self.kind,self.symbol_map[self.info['suit']]))
 
 class Deck():
     def __init__(self):
@@ -69,7 +71,8 @@ class Hand():
                     for v in values:
                         tvals.append(cv+v)
                 values=tvals
-        print("{} for cards: {}\n".format(values,[str(c) for c in self.cards]))
+        print("{} for cards: {}\n".format(values,
+            ",".join([str(c) for c in self.cards])))
         return values
 
     def return_hand(self):
