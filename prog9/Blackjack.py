@@ -22,7 +22,7 @@ class Card():
             return [int(self.info['kind'])]
 
     def __str__(self):
-        return ("{:>2}{}".format(self.kind,self.symbol_map[self.info['suit']]))
+        return ("{:>2}{}".format(self.info['kind'],self.symbol_map[self.info['suit']]))
 
 class Deck():
     def __init__(self):
@@ -120,7 +120,7 @@ class GameMaster():
                 return
             else:
                 for p in current_players:
-                    print("Player {}'s says hit!".format(p.get_name()))
+                    print("Player {} says hit!".format(p.get_name()))
                     p.hit(self.deck.get_top())
                     if(p.has_lost()):
                         break
